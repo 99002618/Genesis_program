@@ -20,10 +20,10 @@ TEST(Box, copyConstructor) {
 	EXPECT_EQ(3, b4.height());
 	EXPECT_EQ(600, b4.volume());
 }
-/*TEST(Box, parameterConstructor1) {
+TEST(Box, parameterConstructor1) {
 	Box b5(10);
 	EXPECT_EQ(0, b5.volume());
-}*/
+}
 TEST(Box, Display) {
 	Box b6(10, 25, 60);
 	std::string ExpectedOut = "10,25,60";
