@@ -1,37 +1,56 @@
-//
-// pch.cpp
-// Include the standard header and generate the precompiled header.
-//
-
-#include "pch.h"
+#include"color.h"
 #include<iostream>
-Image::Image():m_x(0),m_y(0),m_width(0),m_height(0){}
-Image::Image(int a, int b, int c, int d) {
-	m_x = a;
-	m_y = b;
-	m_width = c;
-	m_height = d;
+using namespace std;
+
+
+ Color::Color()
+{
+   m_r=0;
+    m_g=0;
+    m_b=0;
 }
-Image::Image(const Image& ref) {
-	m_x = ref.m_x;
-	m_y = ref.m_y;
-	m_width = ref.m_width;
-	m_height = ref.m_height;
+ Color::Color(int a,int b,int c)
+{
+    m_r=a;
+    m_g=b;
+    m_b=c;
 }
-void Image::move(int a, int b ,int c,int d) {
-	m_x = a;
-	m_y = b;
-	m_width = c;
-	m_height = d;
+ Color::Color(int a)
+{
+    m_r=a;
+    m_g=a;
+    m_b=a;
 }
-void Image::scale(int a, int b) {
-	m_x = a;
-	m_y = b;
+ Color::Color(color_t)
+{
+    m_r=red;
+    m_g=green;
+    m_b=blue;
+
 }
-void Image::resize(int c, int d) {
-	m_width = c;
-	m_height = d;
+int Color::getred()
+{
+     return m_r;
 }
-void Image::display() {
-	std::cout << m_x << "," << m_y << "," << m_width << "," << m_height;
+int Color::getgreen()
+{
+    return m_g;
+
 }
+int Color::getblue()
+{
+    return m_b;
+}
+void Color::invert()
+{
+    int temp = m_r;
+    m_r=m_g;
+    m_g=m_b;
+    m_b=temp;
+
+}
+void Color::display()
+{
+    cout<<m_r<<endl<<m_g<<endl<<m_b;
+}
+
