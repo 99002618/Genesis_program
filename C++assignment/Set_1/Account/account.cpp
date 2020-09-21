@@ -1,9 +1,5 @@
-//
-// pch.cpp
-// Include the standard header and generate the precompiled header.
-//
 #include<iostream>
-#include "pch.h"
+#include "account.h"
 Account::Account() :
 	m_accNumber(0), m_accName(""), m_balance(0) {
 }
@@ -35,3 +31,7 @@ void Account::display() {
 	std::cout << m_accNumber << "," << m_accName << ","
 		<< m_balance << "\n";
 }
+
+
+
+
