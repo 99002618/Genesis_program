@@ -1,27 +1,34 @@
 #include "box.h"
-#include<iostream>
-Box::Box():m_length(0), m_breadth(0), m_height(0){}
-Box::Box(int a, int b, int c): m_length(a),m_breadth(b),m_height(c){}
-Box::Box(int a):m_length(a),m_breadth(a),m_height(a){}
-Box::Box(const Box& ref) {
-	m_length = ref.m_length;
-	m_breadth = ref.m_breadth;
-	m_height = ref.m_height;
+
+TEST(Box, defaultConstructor) {
+  Box b1;
+  EXPECT_EQ(0, b1.length());
+  EXPECT_EQ(0, b1.breadth());
 }
-int Box::length() {
-	return m_length;
+TEST(Box, parameterConstructor) {
+	Box b2(10,20,30);
+	EXPECT_EQ(10, b2.length());
+	EXPECT_EQ(20, b2.breadth());
+	EXPECT_EQ(30, b2.height());
+	EXPECT_EQ(6000, b2.volume());
 }
-int Box::breadth() {
-	return m_breadth;
+TEST(Box, copyConstructor) {
+	Box b3(10, 20, 3);
+	Box b4(b3);
+	EXPECT_EQ(10, b4.length());
+	EXPECT_EQ(20, b4.breadth());
+	EXPECT_EQ(3, b4.height());
+	EXPECT_EQ(600, b4.volume());
 }
-int Box::height() {
-	return m_height;
+TEST(Box, parameterConstructor1) {
+	Box b5(10);
+	EXPECT_EQ(0, b5.volume());
 }
-double Box::volume() {
-	int a;
-	a = m_length * m_breadth * m_height;
-	return a;
-}
-void Box::display() {
-	std::cout << m_length << "," << m_breadth << "," << m_height;
+TEST(Box, Display) {
+	Box b6(10, 25, 60);
+	std::string ExpectedOut = "10,25,60";
+	testing::internal::CaptureStdout();
+	b6.display();
+	std::string ActualOut = testing::internal::GetCapturedStdout();
+	EXPECT_STREQ(ExpectedOut.c_str(), ActualOut.c_str());
 }
