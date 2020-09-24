@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/training/Desktop/Set 3/Customer/customer.h
+string
+-
+cstdint
+-
+
+/home/training/Desktop/Set 3/Customer/customerTest.cpp
+gtest/gtest.h
+-
+postpaid.h
+/home/training/Desktop/Set 3/Customer/postpaid.h
+prepaid.h
+/home/training/Desktop/Set 3/Customer/prepaid.h
+customer.h
+/home/training/Desktop/Set 3/Customer/customer.h
+
+/home/training/Desktop/Set 3/Customer/postpaid.h
+string
+-
+cstdint
+-
+customer.h
+/home/training/Desktop/Set 3/Customer/customer.h
+
+/home/training/Desktop/Set 3/Customer/prepaid.h
+string
+-
+cstdint
+-
+customer.h
+/home/training/Desktop/Set 3/Customer/customer.h
+

@@ -1,0 +1,3 @@
+/home/training/Desktop/Set 3/Customer/CMakeFiles/rebuild_cache.dir
+/home/training/Desktop/Set 3/Customer/CMakeFiles/edit_cache.dir
+/home/training/Desktop/Set 3/Customer/CMakeFiles/executeTests.dir

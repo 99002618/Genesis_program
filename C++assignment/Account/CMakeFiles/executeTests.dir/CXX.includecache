@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/training/Desktop/Set 3/Account/Account.h
+string
+-
+
+/home/training/Desktop/Set 3/Account/AccountTest.cpp
+gtest/gtest.h
+-
+Account.h
+/home/training/Desktop/Set 3/Account/Account.h
+CreditAccount.h
+/home/training/Desktop/Set 3/Account/CreditAccount.h
+SavingsAccount.h
+/home/training/Desktop/Set 3/Account/SavingsAccount.h
+
+/home/training/Desktop/Set 3/Account/CreditAccount.h
+string
+-
+Account.h
+/home/training/Desktop/Set 3/Account/Account.h
+
+/home/training/Desktop/Set 3/Account/SavingsAccount.h
+string
+-
+Account.h
+/home/training/Desktop/Set 3/Account/Account.h
+
